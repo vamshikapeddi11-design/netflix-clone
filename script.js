@@ -114,6 +114,6 @@ function signOut(){
 
   alert("Signed Out Successfully");
 
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 
 }
