@@ -1,0 +1,260 @@
+ html{
+    scroll-behavior: smooth;
+}
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+#navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+}
+
+.logo{
+    width: 150px;
+}
+
+.nav-right input{
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 280px;
+}
+.signout-btn{
+    background: red;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.signout-btn:hover{
+    background: darkred;
+}
+
+/* HERO SECTION */
+
+/* BODY */
+body {
+  margin: 0;
+  background: black;
+  font-family: Arial, sans-serif;
+}
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/9b7f8bfa-f0f7-4a7f-b3f0-2f72b8a6a5ff/6eab5a97-d4d0-4f7d-85db-9cfaa0f1e4e6/IN-en-20240219-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.content{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    top: 170px;
+    padding: 20px;
+}
+
+.content h1{
+    font-size: 62px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.content h3{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.hero-text{
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+.get-started-btn{
+    background: red;
+    color: white;
+    border: none;
+    padding: 16px 42px;
+    font-size: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.get-started-btn:hover{
+    background: darkred;
+}
+
+/* MOVIE SECTION */
+
+.movies-section{
+    padding: 40px;
+}
+
+.movies-section h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* MOVIE ROW */
+
+.movie-row{
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+.movie-row::-webkit-scrollbar{
+    display: none;
+}
+
+/* MOVIE CARD */
+
+.movie-card{
+    min-width: 220px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.movie-card:hover{
+    transform: scale(1.08);
+}
+
+.movie-card img{
+    width: 220px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* MOVIE INFO */
+
+.movie-info{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.movie-info h3{
+    font-size: 20px;
+}
+
+/* SEARCH RESULTS */
+
+.search-results{
+    display: none;
+    gap: 25px;
+    padding: 40px;
+    flex-wrap: wrap;
+    background: black;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 20;
+}
+
+.not-found{
+    color: white;
+    font-size: 40px;
+}
+
+/* FOOTER */
+
+footer{
+    padding: 40px;
+    text-align: center;
+    background: #111;
+    margin-top: 50px;
+}
+
+.footer-links{
+    margin-top: 15px;
+}
+
+.footer-links a{
+    color: gray;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.footer-links a:hover{
+    color: white;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .content h1{
+        font-size: 42px;
+    }
+
+    .content h3{
+        font-size: 22px;
+    }
+
+    .hero-text{
+        font-size: 17px;
+    }
+
+    .get-started-btn{
+        font-size: 20px;
+        padding: 14px 28px;
+    }
+
+    .movie-card{
+        min-width: 170px;
+    }
+
+    .movie-card img{
+        width: 170px;
+        height: 250px;
+    }
+
+    .nav-right input{
+        width: 180px;
+    }
+
+    .logo{
+        width: 110px;
+    }
+
+}

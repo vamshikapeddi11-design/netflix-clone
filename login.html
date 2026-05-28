@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Netflix Login</title>
+
+  <link rel="stylesheet" href="login.css">
+
+</head>
+
+<body>
+
+  <div class="background"></div>
+
+  <!-- NETFLIX LOGO -->
+
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+    class="logo"
+  >
+
+  <!-- LOGIN BOX -->
+
+  <div class="login-box">
+
+    <h1>Sign In</h1>
+
+    <!-- EMAIL -->
+
+    <input
+      type="email"
+      id="email"
+      placeholder="Email or phone number"
+      required
+    >
+
+    <!-- PASSWORD -->
+
+    <input
+      type="password"
+      id="password"
+      placeholder="Password"
+      required
+    >
+
+    <!-- SIGN IN BUTTON -->
+
+    <button onclick="loginUser()">
+      Sign In
+    </button>
+
+    <!-- REMEMBER -->
+
+    <div class="remember">
+
+      <label class="check-box">
+
+        <input type="checkbox">
+
+        <span>Remember me</span>
+
+      </label>
+
+    </div>
+
+  </div>
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    function loginUser(){
+
+      const email = document.getElementById("email").value.trim();
+
+      const password = document.getElementById("password").value.trim();
+
+      if(email === "" || password === ""){
+
+        alert("Please enter email and password");
+
+        return;
+
+      }
+
+      // GET ALL USERS
+
+      let users = JSON.parse(localStorage.getItem("netflixUsers")) || {};
+
+      // IF EMAIL EXISTS
+
+      if(users[email]){
+
+        // CHECK PASSWORD
+
+        if(users[email] === password){
+
+          alert("Login Successful");
+
+          window.location.href = "index.html";
+
+        }
+        else{
+
+          alert("Wrong Password");
+
+        }
+
+      }
+
+      // NEW USER
+
+      else{
+
+        users[email] = password;
+
+        localStorage.setItem("netflixUsers", JSON.stringify(users));
+
+        alert("Account Created Successfully");
+
+        window.location.href = "index.html";
+
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>

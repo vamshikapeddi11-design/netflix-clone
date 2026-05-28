@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Netflix Clone</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav id="navbar">
+
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+    class="logo"
+  >
+
+  <div class="nav-right">
+
+  <input
+    type="text"
+    id="search"
+    placeholder="Search movies..."
+  >
+
+  <button class="signout-btn" onclick="signOut()">
+    Sign Out
+  </button>
+
+</div>
+
+</nav>
+
+<!-- SEARCH RESULTS -->
+
+<div id="searchResults" class="search-results"></div>
+
+<!-- HERO SECTION -->
+
+<div class="hero">
+
+  <div class="overlay"></div>
+
+  <div class="content">
+
+    <h1>Unlimited movies, TV shows and more</h1>
+
+    <h3>Watch anywhere. Cancel anytime.</h3>
+
+    <p class="hero-text">
+      Unlimited entertainment starting at just ₹149.
+    </p>
+
+    <button class="get-started-btn" onclick="scrollToMovies()">
+      Get Started ›
+    </button>
+
+  </div>
+
+</div>
+
+<!-- MOVIES -->
+
+<div id="moviesContainer">
+
+<!-- TRENDING -->
+
+<section class="movies-section" id="movies">
+
+<h2>Trending Now</h2>
+
+<div class="movie-row">
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg">
+<div class="movie-info"><h3>The Dark Knight</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg">
+<div class="movie-info"><h3>Joker</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg">
+<div class="movie-info"><h3>Spider Man</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg">
+<div class="movie-info"><h3>Avengers</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/5YZbUmjbMa3ClvSW1Wj3D6XGolb.jpg">
+<div class="movie-info"><h3>Free Guy</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg">
+<div class="movie-info"><h3>Batman</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg">
+<div class="movie-info"><h3>Black Panther</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/6KErczPBROQty7QoIsaa6wJYXZi.jpg">
+<div class="movie-info"><h3>Fight Club</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/lyQBXzOQSuE59IsHyhrp0qIiPAz.jpg">
+<div class="movie-info"><h3>Gladiator</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg">
+<div class="movie-info"><h3>Godzilla x Kong</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/iPDkaSdKk2jRLTM65UOEoKtsIZ8.jpg">
+<div class="movie-info"><h3>Terminator 2</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg">
+<div class="movie-info"><h3>Parasite</h3></div>
+</div>
+
+</div>
+</section>
+
+<!-- TOP RATED -->
+
+<section class="movies-section">
+
+<h2>Top Rated</h2>
+
+<div class="movie-row">
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg">
+<div class="movie-info"><h3>Batman</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg">
+<div class="movie-info"><h3>Black Panther</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg">
+<div class="movie-info"><h3>The Dark Knight</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg">
+<div class="movie-info"><h3>Spider Man</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg">
+<div class="movie-info"><h3>Avengers</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/5YZbUmjbMa3ClvSW1Wj3D6XGolb.jpg">
+<div class="movie-info"><h3>Doctor Strange</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg">
+<div class="movie-info"><h3>Joker</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg">
+<div class="movie-info"><h3>Avengers Infinity War</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg">
+<div class="movie-info"><h3>Sonic</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg">
+<div class="movie-info"><h3>John Wick 4</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg">
+<div class="movie-info"><h3>Your Name</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/aNtAP8ZzUMdnCPoqYgVOcgI0Eh4.jpg">
+<div class="movie-info"><h3>Shutter Island</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg">
+<div class="movie-info"><h3>Pacific Rim</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/s16H6tpK2utvwDtzZ8Qy4qm5Emw.jpg">
+<div class="movie-info"><h3>Whiplash</h3></div>
+</div>
+
+</div>
+
+</section>
+
+<!-- HORROR MOVIES -->
+
+<section class="movies-section">
+
+<h2>Horror Movies</h2>
+
+<div class="movie-row">
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg">
+<div class="movie-info"><h3>The Nun</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/w2PMyoyLU22YvrGK3smVM9fW1jj.jpg">
+<div class="movie-info"><h3>IT</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/5fX1oSGuYdKgwWmUTAN5MNSQGzr.jpg">
+<div class="movie-info"><h3>Conjuring</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg">
+<div class="movie-info"><h3>Annabelle</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg">
+<div class="movie-info"><h3>Insidious</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/w2PMyoyLU22YvrGK3smVM9fW1jj.jpg">
+<div class="movie-info"><h3>Scream</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/5fX1oSGuYdKgwWmUTAN5MNSQGzr.jpg">
+<div class="movie-info"><h3>Evil Dead</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg">
+<div class="movie-info"><h3>Smile</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg">
+<div class="movie-info"><h3>A Quiet Place</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/b6ko0IKC8MdYBBPkkA1aBPLe2yz.jpg">
+<div class="movie-info"><h3>Hereditary</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/j9HrX8f7GbZQm1BrBiR40uFQZSb.jpg">
+<div class="movie-info"><h3>The Ring</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/lHV8HHlhwNup2VbpiACtlKzaGIQ.jpg">
+<div class="movie-info"><h3>Smile 2</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/5fX1oSGuYdKgwWmUTAN5MNSQGzr.jpg">
+<div class="movie-info"><h3>Evil Dead Rise</h3></div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ACTION MOVIES -->
+
+<section class="movies-section">
+
+<h2>Action Movies</h2>
+
+<div class="movie-row">
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg">
+<div class="movie-info"><h3>John Wick</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg">
+<div class="movie-info"><h3>Mission Impossible</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg">
+<div class="movie-info"><h3>Avengers Endgame</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg">
+<div class="movie-info"><h3>Black Panther</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg">
+<div class="movie-info"><h3>Mad Max</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg">
+<div class="movie-info"><h3>Extraction</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg">
+<div class="movie-info"><h3>Fast X</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg">
+<div class="movie-info"><h3>Deadpool</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg">
+<div class="movie-info"><h3>Thor Ragnarok</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/y95lQLnuNKdPAzw9F9Ab8kJ80c3.jpg">
+<div class="movie-info"><h3>Venom</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg">
+<div class="movie-info"><h3>Doctor Strange 2</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/5BwqwxMEjeFtdknRV792Svo0K1v.jpg">
+<div class="movie-info"><h3>Black Adam</h3></div>
+</div>
+
+</div>
+
+</section>
+
+<!-- COMEDY MOVIES -->
+
+<section class="movies-section">
+
+<h2>Comedy Movies</h2>
+
+<div class="movie-row">
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg">
+<div class="movie-info"><h3>Hangover</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/8QVDXDiOGHRcAD4oM6MXjE0osSj.jpg">
+<div class="movie-info"><h3>Interstellar</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/5YZbUmjbMa3ClvSW1Wj3D6XGolb.jpg">
+<div class="movie-info"><h3>Doctor Strange</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg">
+<div class="movie-info"><h3>Welcome</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://upload.wikimedia.org/wikipedia/en/d/dc/Jumanji_Welcome_to_the_Jungle.png">
+<div class="movie-info"><h3>Jumanji</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg">
+<div class="movie-info"><h3>Deadpool</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg">
+<div class="movie-info"><h3>Central Intelligence</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/2CAL2433ZeIihfX1Hb2139CX0pW.jpg">
+<div class="movie-info"><h3>Home Alone</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/7D430eqZj8y3oVkLFfsWXGRcpEG.jpg">
+<div class="movie-info"><h3>Kung Fu Hustle</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/2TeJfUZMGolfDdW6DKhfIWqvq8y.jpg">
+<div class="movie-info"><h3>Toy Story 4</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/4N55tgxDW0RRATyrZHbx0q9HUKv.jpg">
+<div class="movie-info"><h3>The Mask</h3></div>
+</div>
+
+<div class="movie-card">
+<img src="https://image.tmdb.org/t/p/w500/ooBGRQBdbGzBxAVfExiO8r7kloA.jpg">
+<div class="movie-info"><h3>Minions</h3></div>
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    width:100%;
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+}
+
+/* BACKGROUND */
+
+.background{
+    width:100%;
+    height:100vh;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+    url('https://assets.nflxext.com/ffe/siteui/vlv3/1df6f4ae-5f5d-47ff-b0f2-6d8ecf4d17fb/93fdc4d0-7d90-4d3f-a865-7f6f77b99f5f/IN-en-20240513-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    position:absolute;
+}
+
+/* LOGO */
+
+.logo{
+    width:170px;
+    position:absolute;
+    top:25px;
+    left:50px;
+    z-index:10;
+}
+
+/* LOGIN BOX */
+
+.login-box{
+    width:430px;
+
+    background:rgba(0,0,0,0.78);
+
+    padding:60px;
+
+    border-radius:8px;
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    z-index:10;
+}
+
+.login-box h1{
+    color:white;
+    margin-bottom:30px;
+    font-size:32px;
+}
+
+.login-box input{
+    width:100%;
+
+    padding:16px;
+
+    margin-bottom:18px;
+
+    background:#333;
+
+    border:none;
+
+    border-radius:5px;
+
+    color:white;
+
+    font-size:16px;
+}
+
+.login-box input:focus{
+    outline:none;
+    background:#444;
+}
+
+.login-box button{
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:5px;
+
+    background:#e50914;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    margin-top:10px;
+}
+
+.remember{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:15px;
+
+    color:#b3b3b3;
+
+    font-size:14px;
+}
+
+.remember a{
+    color:#b3b3b3;
+    text-decoration:none;
+}
+.check-box{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+}
+
+.check-box input{
+    width:16px;
+    height:16px;
+    accent-color:#737373;
+}.check-box{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+}
+
+.check-box input{
+    width:16px;
+    height:16px;
+    accent-color:#737373;
+}
+
+.signup-text{
+    margin-top:60px;
+    color:#737373;
+    font-size:16px;
+}
+
+.signup-text a{
+    color:white;
+    text-decoration:none;
+}
+
+.small-text{
+    margin-top:15px;
+    color:#8c8c8c;
+    font-size:13px;
+    line-height:18px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .logo{
+        width:120px;
+        left:20px;
+    }
+
+    .login-box{
+        width:90%;
+        padding:40px 25px;
+    }
+
+}
